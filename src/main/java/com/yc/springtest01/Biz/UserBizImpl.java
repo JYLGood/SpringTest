@@ -1,4 +1,4 @@
-package com.yc.springtest01;
+package com.yc.springtest01.Biz;
 
 import com.yc.springtest01.Biz.UserBiz;
 import com.yc.springtest01.dao.UserDao;

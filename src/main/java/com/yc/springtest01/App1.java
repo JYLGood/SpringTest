@@ -1,8 +1,8 @@
-package com.yc;
+package com.yc.springtest01;
 
 import com.yc.springtest01.Biz.UserBiz;
 import com.yc.springtest01.Config;
-import com.yc.springtest01.UserDaoImpl;
+import com.yc.springtest01.dao.UserDaoImpl;
 import com.yc.springtest01.dao.UserDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -21,7 +21,7 @@ public class App1 {
         UserBiz ub=(UserBiz) context.getBean("userBizImpl");
         ub.addUser("王五");
 
-        //////////////////////////////////////////////////
+        //////////////////////////////////////////////////以前的方法
         UserDao udd=new UserDaoImpl();
         udd.addUser("李四");
     }
