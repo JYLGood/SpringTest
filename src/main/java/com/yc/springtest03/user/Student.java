@@ -1,0 +1,16 @@
+package com.yc.springtest03.user;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Data
+@AllArgsConstructor //带所有参数构造方法
+@NoArgsConstructor  //无参构造方法
+//@ToString
+public class Student {
+    private String name;
+    private double height;
+    private double weight;
+}
