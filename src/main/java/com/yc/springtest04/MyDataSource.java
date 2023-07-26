@@ -1,6 +1,8 @@
 package com.yc.springtest04;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
@@ -12,6 +14,7 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.logging.Logger;
 
+@Component
 public class MyDataSource implements DataSource {
     private ConcurrentLinkedQueue<MyConnection> pool;
 
