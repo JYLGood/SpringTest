@@ -1,4 +1,4 @@
-package com.yc.springtest04;
+package com.yc.springtest04.datasource;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
@@ -100,6 +100,13 @@ public class MyDataSource implements DataSource {
     @Override
     public Logger getParentLogger() throws SQLFeatureNotSupportedException {
         return null;
+    }
+
+    public void returnConnection(Connection con){
+        MyConnection mc=new MyConnection();
+        mc.status=false;
+        mc.con=con;
+        this.pool.add(mc);
     }
 
 }
