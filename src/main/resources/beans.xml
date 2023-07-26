@@ -3,10 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--spring ioc-->
+    <bean id="addr" class="com.yc.spring.test1.Address">
+        <!--spring di-->
+        <property name="province" value="湖南省" />
+        <property name="city" value="长沙市" />
+    </bean>
 
     <!--  map:   <String Object>   -->
     <!--  map:   "s"  Object对象   -->
-    <bean id="s" class="com.yc.spring.Student">
+    <bean id="s" class="com.yc.spring.test1.Student" scope="prototype"><!--prototype创建不同的对象-->
+        <!--DI:依赖的注入-->
+        <property name="id" value="100"></property>
+        <property name="name" value="张三"></property>
+
+        <!--ref表示引入spring容器的另一个托管bean-->
+        <property name="address" ref="addr" />
         <!-- collaborators and configuration for this bean go here -->
     </bean>
 
